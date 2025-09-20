@@ -9,19 +9,19 @@ export default function Skills() {
       category: "Frontend",
       skills: [
         { name: "React", level: 90 },
-        { name: "Next.js", level: 85 },
-        { name: "TypeScript", level: 85 },
-        { name: "TailwindCSS", level: 90 },
+        { name: "Next.js", level: 70 },
+        { name: "TypeScript", level: 90 },
+        { name: "TailwindCSS", level: 70 },
         { name: "HTML5/CSS3", level: 95 }
       ]
     },
     {
       category: "Backend",
       skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Nest.js", level: 80 },
-        { name: "Express", level: 85 },
-        { name: "TypeORM", level: 75 },
+        { name: "Node.js", level: 90 },
+        { name: "Nest.js", level: 90 },
+        { name: "Express", level: 90 },
+        { name: "TypeORM", level: 90 },
         { name: "REST APIs", level: 90 },
         { name: "GraphQL", level: 70 }
       ]
@@ -29,8 +29,8 @@ export default function Skills() {
     {
       category: "Banco de Dados",
       skills: [
-        { name: "PostgreSQL", level: 80 },
-        { name: "MongoDB", level: 85 },
+        { name: "PostgreSQL", level: 95 },
+        { name: "MongoDB", level: 75 },
         { name: "MySQL", level: 75 }
       ]
     },
@@ -39,7 +39,7 @@ export default function Skills() {
       skills: [
         { name: "Git/GitHub", level: 90 },
         { name: "Docker", level: 75 },
-        { name: "AWS", level: 65 },
+        { name: "AWS", level: 80 },
         { name: "CI/CD", level: 70 }
       ]
     }
