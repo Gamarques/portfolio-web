@@ -24,3 +24,145 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Estilos para ocultar a barra de rolagem mantendo a funcionalidade */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.carousel .stack-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: visible; 
+    background: transparent;
+    padding: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    isolation: isolate; 
+}
+
+.carousel .stack-card::before,
+.carousel .stack-card::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    background: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    z-index: -1;
+    border-radius: 16px;
+    animation: spin 3s linear infinite;
+    pointer-events: none;
+}
+
+.carousel .stack-card::after {
+    filter: blur(15px);
+    opacity: 0.5;
+}
+
+.carousel .stack-card-inner {
+    background: #1a1a1a;
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    position: relative;
+    z-index: 2; 
+}
+
+/* Efeito de borda galática com tons de roxo, azul e preto */
+.rgb-border-glow {
+  --border-width: 2px;
+  --border-radius: 8px;
+  
+  position: relative;
+  border-radius: var(--border-radius);
+  z-index: 0;
+  overflow: hidden;
+  padding: var(--border-width);
+  background-color: #0a0a18;
+  box-shadow: 0 0 15px rgba(88, 70, 249, 0.5);
+}
+
+.rgb-border-glow::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  padding: var(--border-width);
+  border-radius: var(--border-radius);
+  background: linear-gradient(
+    217deg,
+    #8a2be2, /* Violeta profundo */
+    #4b0082, /* Índigo */
+    #191970, /* Azul meia-noite */
+    #000033, /* Azul muito escuro */
+    #4b0082, /* Índigo */
+    #8a2be2  /* Violeta profundo */
+  );
+  background-size: 400% 400%;
+  animation: galaxy-animation 10s ease infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.rgb-border-glow::after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: -10px;
+  background: radial-gradient(circle, rgba(88, 70, 249, 0.3) 0%, rgba(45, 23, 100, 0.1) 50%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(10px);
+  opacity: 0.7;
+}
+
+@keyframes galaxy-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes rgb-border-animation {
+  0% { 
+    background-position: 0% 50%; 
+  }
+  50% { 
+    background-position: 100% 50%; 
+  }
+  100% { 
+    background-position: 0% 50%; 
+  }
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
