@@ -7,24 +7,15 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Portfolio Website",
-      description: "Site pessoal construído com Next.js e TailwindCSS com design inspirado no GitHub/VSCode.",
-      tags: ["Next.js", "TailwindCSS", "Framer Motion"],
+      title: "Recomendador de filmes",
+      description: "Sistema de recomendação de filmes desenvolvido com Python e Machine Learning que utiliza o algoritmo de Cosine Similarity para encontrar filmes similares.",
+      tags: ["Python", "Streamlit", "Machine Learning", "Scikit-learn"],
       image: "/project1.jpg",
-      github: "https://github.com/Gamarques/portfolio-web",
-      demo: "https://gabrielmarques.dev"
+      github: "https://github.com/Gamarques/movie_recommendation_ai",
+      demo: "https://movie-recommendations-ai.streamlit.app/"
     },
     {
       id: 2,
-      title: "Recomendador de filmes",
-      description: "Aplicação para recomendação de filmes atraves de Machine Learning",
-      tags: ["Python", "Streamlit", "Pandas", "Machine Learning"],
-      image: "/project2.jpg",
-      github: "https://github.com/Gamarques/Movie-recomendation-system",
-      demo: ""
-    },
-    {
-      id: 3,
       title: "Amazon webscrapper",
       description: "Aplicação para buscar produtos no site da amazon",
       tags: ["Express", "TypeScript", "Bun.js"],
@@ -33,7 +24,7 @@ export default function Projects() {
       demo: ""
     },
     {
-      id: 4,
+      id: 3,
       title: "Yu-gi-oh! | Jo-ken-po",
       description: "Jogo de jo-ken-po inspirado no jogo de cartas/anime Yu-Gi-Oh!.",
       tags: ["Html5", "Javascript", "CSS"],
