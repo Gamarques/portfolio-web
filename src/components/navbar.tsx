@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleUser, faCodeBranch, faBookOpen, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import { faCircleUser, faCodeBranch, faBookOpen, faLaptopCode, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -15,6 +15,7 @@ export default function Navbar() {
     { name: 'projects', href: '/projects', icon: faCodeBranch },
     { name: 'experience', href: '/experiences', icon: faBookOpen },
     { name: 'skills', href: '/skills', icon: faLaptopCode },
+    { name: 'contact', href: '/contact', icon: faEnvelope },
   ];
 
   const isActive = (path: string) => pathname === path;

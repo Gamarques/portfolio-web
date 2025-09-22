@@ -9,7 +9,7 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 export default function Sidebar() {
   return (
-    <aside className="w-72 h-screen bg-[#161b22] text-white border-r border-[#30363d] overflow-y-auto sticky top-0 scrollbar-hide">
+    <aside className="hidden lg:block w-72 h-screen bg-[#161b22] text-white border-r border-[#30363d] overflow-y-auto sticky top-0 scrollbar-hide">
       <div className="flex flex-col items-center py-8">
         <div className="profile-pic w-40 h-40 relative mb-6 z-10">
           <div className="absolute inset-0 rounded-full border-2 border-[#30363d] animate-pulse"></div>

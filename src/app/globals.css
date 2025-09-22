@@ -25,6 +25,26 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Classes responsivas customizadas */
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+  
+  .mobile-full {
+    width: 100% !important;
+  }
+  
+  .mobile-padding {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .mobile-text-sm {
+    font-size: 0.875rem !important;
+  }
+}
+
 /* Estilos para ocultar a barra de rolagem mantendo a funcionalidade */
 .scrollbar-hide {
   -ms-overflow-style: none;  /* IE and Edge */

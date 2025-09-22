@@ -35,7 +35,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="flex min-h-screen">
           <Sidebar />
-          <div className="flex-1 overflow-x-hidden bg-[#0D1117]">
+          <div className="flex-1 w-full lg:w-auto overflow-x-hidden bg-[#0D1117]">
             {/* Navbar component */}
             <Navbar />
             {/* GitHub-like background grid */}
@@ -49,7 +49,7 @@ export default function RootLayout({
                  }}>
             </div>
             {/* Main content */}
-            <div className="relative z-10 px-6 py-6 min-h-screen flex flex-col">
+            <div className="relative z-10 px-4 lg:px-6 py-6 min-h-screen flex flex-col">
               <div className="flex-grow">
                 {children}
               </div>
